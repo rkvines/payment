@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Project 2 | Js</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', 'Poppins', sans-serif;
+    }
+
+    body {
+        background-color: rgba(38, 3, 68, 0.413);
+        justify-content: center;
+        display: flex;
+    }
+
+    .container {
+        padding: 25px 10px;
+    }
+
+    h3 {
+        font-size: 50px;
+        text-align: center;
+        padding: 20px 5px;
+    }
+
+    span {
+        color: rgba(38, 38, 214, 0.727);
+    }
+
+    div {
+        padding: 10px 10px;
+    }
+
+    i {
+        padding: 5px;
+        font-size: 25px;
+        color: rgb(202, 33, 171);
+    }
+
+    select {
+        width: 200px;
+        padding: 10px 5px 10px;
+        background-color: rgba(38, 3, 68, 0.413);
+        border: 1px solid rgba(38, 3, 68, 0.413);
+        border-radius: 10px;
+        font-size: 25px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    option {
+        padding: 10px;
+    }
+
+    input {
+        padding: 10px;
+        background: rgba(38, 3, 68, 0.138);
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        outline: none;
+        border: none;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+        font-weight: 600;
+        background: rgba(38, 3, 68, 0.413);
+        border: 1px solid rgba(38, 3, 68, 0.138);
+        border-radius: 10px;
+        transition: all ease 0.5s;
+        margin-left: 20%;
+    }
+
+    button i {
+        color: white;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        background: transparent;
+        border: 1px solid rgba(38, 3, 68, 0.413);
+    }
+    
+    /* Popup Design */
+    .popup{
+        padding: 10px;
+        width: 500px;
+        color: white;
+        background: rgba(38, 3, 68, 0.413);
+        position: absolute;
+        margin-top: 10%;
+        display: none;
+    }
+    .popup p{
+        padding: 10px;
+        font-size: 25px;
+        font-weight: 600;
+        display: flex;
+    }
+    .popup p span{
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 5px;margin-left: 50px;
+        color: white;
+    }
+    .popup .popup-nav{
+        display: flex;
+    }
+    .popup .popup-nav i {
+        margin-left: 95%;
+        color: black;
+    }
+
+
+
+    /* Main Desing Start */
+    .send-by-me {
+        display: flex;
+    }
+    .send-by-me p{
+        margin-top: 5px;
+        margin-left: 50px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h3> Money<span>Pay</span></h3>
+        <hr>
+        <br>
+        <div class="send-by-me">
+            <i class='bx bx-user'></i>
+            <p> ME </p>
+        </div>
+        <div class="slect-by-person">
+            <i class='bx bx-send'></i>
+            <input type="text" id="send-to" placeholder="Enter Send User AC Number">
+        </div>
+        <div class="amount-type">
+            <i class='bx bxs-wallet-alt'></i>
+            <input type="text" placeholder="Enter Your Amount " id="amount">
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="btn">
+            <button id="btn" type="submit" onclick="pop(),pay()">Pay Now</button>
+        </div>
+
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-nav">
+            <i class='bx bxs-chevron-left-circle' id="close" onclick="popcls()"></i>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <p id="value-1">Send By :- <span id="pe-value"></span></p>
+        <p id="value-2">Send AC No :- <span id="send-value"></span></p>
+        <p id="amount-value">Amount :- <span id="amt-value"></span></p>
+    </div>
+
+    <!-- My Javascript -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
